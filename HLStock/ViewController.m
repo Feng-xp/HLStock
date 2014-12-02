@@ -15,6 +15,8 @@
 
 #define BASE_URL        @"http://hq.sinajs.cn/list="
 
+#define TINT_COLOR      [UIColor colorWithRed:255.0/255.0 green:252.0/255.0 blue:248.0/255.0 alpha:1]
+
 @interface ViewController () <NSURLConnectionDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic)   UITableView *tableView;
@@ -48,6 +50,7 @@
     _tableView.dataSource = self;
     _tableView.allowsMultipleSelectionDuringEditing = YES;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.backgroundColor = TINT_COLOR;
     [_tableView registerNib:[UINib nibWithNibName:@"LFStockCell" bundle:nil] forCellReuseIdentifier:@"LFStockCell"];
     [self.view addSubview:_tableView];
     
@@ -150,7 +153,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.width, 30)];
-    view.backgroundColor = [UIColor colorWithRed:59.0/255.0 green:152.0/255.0 blue:255.0/255.0 alpha:1];
+    view.backgroundColor = [UIColor colorWithRed:59.0/255.0 green:152.0/255.0 blue:205.0/255.0 alpha:1];
     
     UILabel *nameLabel = [self createLabelWithText:@"名称"];
     nameLabel.left = 10;
@@ -174,6 +177,7 @@
 {
     LFStockCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LFStockCell"];
     [cell loadCellWithData:[_stockData dictionaryWithValuesForKeys:@[_stockList[indexPath.row]]]];
+    cell.contentView.backgroundColor = TINT_COLOR;
     return cell;
 }
 

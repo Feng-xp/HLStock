@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5B9BA8EE-3FBC-4DE3-B443-DC61932164E9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HLStock</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A75FA32E463A890E74BA28724751EADAA105C6E4</key>
+		<string>github.com:Feng-xp/HLStock.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HLStock.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A75FA32E463A890E74BA28724751EADAA105C6E4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Feng-xp/HLStock.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A75FA32E463A890E74BA28724751EADAA105C6E4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A75FA32E463A890E74BA28724751EADAA105C6E4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HLStock</string>
+		</dict>
+	</array>
+</dict>
+</plist>

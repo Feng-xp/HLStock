@@ -50,7 +50,9 @@
 
         CGFloat currentPrice = [stockValues[3] floatValue];
         CGFloat yesterdayPrice = [stockValues[2] floatValue];
-        
+        if (currentPrice == 0) {
+            currentPrice = yesterdayPrice;
+        }
         self.nowPriceLabel.text = [NSString stringWithFormat:@"%.2f",currentPrice];
         self.nameLabel.text = stockValues[0];
         self.codeLabel.text = [stockID substringFromIndex:2];

@@ -23,6 +23,12 @@
     
     [[LFStorageManager shareInstance] load];
     
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:255.0/255.0 green:252.0/255.0 blue:248.0/255.0 alpha:1]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           NSForegroundColorAttributeName: [UIColor grayColor]
+                                                           }];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:59.0/255.0 green:152.0/255.0 blue:205.0/255.0 alpha:1]];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -35,12 +41,12 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    [[LFStorageManager shareInstance] save];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [[LFStorageManager shareInstance] save];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

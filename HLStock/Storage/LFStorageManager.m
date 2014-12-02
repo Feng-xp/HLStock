@@ -26,7 +26,7 @@ static LFStorageManager *instance;
 
 - (void)save
 {
-    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.ihuilian.test"];
+    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.feng.stock"];
     [userDefaults setObject:_stockList forKey:STOCK_LIST_KEY];
     [userDefaults setObject:_stockData forKey:STOCK_DATA_KEY];
     [userDefaults synchronize];
@@ -34,7 +34,7 @@ static LFStorageManager *instance;
 
 - (void)load
 {
-    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.ihuilian.test"];
+    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.feng.stock"];
     NSArray *data = [userDefaults objectForKey:STOCK_LIST_KEY];
     self.stockList = [NSArray arrayWithArray:data];
     

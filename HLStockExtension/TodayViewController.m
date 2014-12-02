@@ -44,9 +44,6 @@
     [_tableView registerClass:[HLStockViewCell class] forCellReuseIdentifier:@"HLStockViewCell"];
     [self.view addSubview:_tableView];
     
-    self.stockList = @[@"sh600859",@"sh600720",@"sz002495",@"sz002363"];
-    self.stockData = [NSMutableDictionary dictionary];
-    
     UIView *tapView = [[UIView alloc] initWithFrame:self.view.bounds];
     tapView.backgroundColor = [UIColor clearColor];
     tapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -54,12 +51,12 @@
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapAction:)];
     [tapView addGestureRecognizer:tapGesture];
     
-//    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.ihuilian.test"];
-//    NSArray *data = [userDefaults objectForKey:STOCK_LIST_KEY];
-//    self.stockList = [NSArray arrayWithArray:data];
-//    
-//    NSDictionary *dict = [userDefaults objectForKey:STOCK_DATA_KEY];
-//    self.stockData = [[NSDictionary dictionaryWithDictionary:dict] mutableCopy];
+    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.feng.stock"];
+    NSArray *data = [userDefaults objectForKey:STOCK_LIST_KEY];
+    self.stockList = [NSArray arrayWithArray:data];
+    
+    NSDictionary *dict = [userDefaults objectForKey:STOCK_DATA_KEY];
+    self.stockData = [[NSDictionary dictionaryWithDictionary:dict] mutableCopy];
 }
 
 #pragma mark - UITableViewDelegae && UITableViewDataSource
@@ -118,7 +115,7 @@
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets
 {
-    return UIEdgeInsetsMake(defaultMarginInsets.top, defaultMarginInsets.left, 0, defaultMarginInsets.right);
+    return UIEdgeInsetsMake(0, 20, 0, 5);
 }
 
 #pragma mark-

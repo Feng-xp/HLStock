@@ -86,6 +86,9 @@
         
         CGFloat currentPrice = [stockValues[3] floatValue];
         CGFloat yesterdayPrice = [stockValues[2] floatValue];
+        if (currentPrice == 0) {
+            currentPrice = yesterdayPrice;
+        }
         CGFloat diff = currentPrice - yesterdayPrice;
         UIColor *textColor = nil;
         NSString *sign = nil;
@@ -101,7 +104,7 @@
             textColor = [UIColor whiteColor];
             sign = @"+";
         }
-        _stockPriceLabel.text = [NSString stringWithFormat:@"%@(%@%.2f)",stockValues[3],sign,fabsf(diff)];
+        _stockPriceLabel.text = [NSString stringWithFormat:@"%.2f(%@%.2f%@)",currentPrice,sign,fabsf(diff)/yesterdayPrice * 100 + 0.004,@"%"];
         _stockPriceLabel.textColor = textColor;
         [_stockPriceLabel sizeToFit];
     }
